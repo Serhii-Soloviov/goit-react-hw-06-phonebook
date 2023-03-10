@@ -7,7 +7,7 @@ export const Filter = () => {
   const filter = useSelector(getFilter);
   const dispatch = useDispatch();
   const onChangeFilter = event =>
-    dispatch(setContactFilter(event.currentTarget.value));
+    dispatch(setContactFilter(event.currentTarget.value.toLowerCase()));
   return (
     <FilterBox>
       <FilterLabel>Find contacts by name</FilterLabel>
